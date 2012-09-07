@@ -4,5 +4,5 @@ class Photo < ActiveRecord::Base
   attr_accessible :person
 
   attr_accessible :owner, :owner_type
-  attr_accessible :description
+  attr_accessible :name, :path, :description, :created_date, :modified_date
 end
