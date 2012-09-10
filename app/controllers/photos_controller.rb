@@ -11,7 +11,6 @@ class PhotosController < ApplicationController
   end
 
   def show
-    # send_data xls.to_stream().read, :filename => @photo.name
     send_file @photo.path, :type => 'image/jpeg', :filename => @photo.name#:disposition => 'inline'
   end
 
@@ -25,8 +24,7 @@ class PhotosController < ApplicationController
 
   def find_photo
     @photo = Photo.find(params[:id])
-    p '---------------', @photo
-    raise Errno::ENOENT.new if @photo.path.blank? || File.exist?(@photo.path)
+    raise Errno::ENOENT.new if @photo.path.blank? || !File.exist?(@photo.path)
   rescue ActiveRecord::RecordNotFound, Errno::ENOENT
     head(404)
   end
