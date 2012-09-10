@@ -11,6 +11,8 @@ class PhotosController < ApplicationController
   end
 
   def show
+    # send_data xls.to_stream().read, :filename => @photo.name
+    send_file @photo.path, :type => 'image/jpeg', :filename => @photo.name#:disposition => 'inline'
   end
 
   private
