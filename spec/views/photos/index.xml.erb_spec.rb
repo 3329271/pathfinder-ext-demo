@@ -7,7 +7,7 @@ describe "photos/index.xml.erb" do
       person = FactoryGirl.create(:person)
       @russian_passport = FactoryGirl.create(:russian_passport, :person => person)
       @date = DateTime.now
-      @photo1 = person.photos.create(FactoryGirl.attributes_for(:photo, :owner => @russian_passport, :created_date => @date, :modified_date => @date))
+      @photo1 = person.photos.create(FactoryGirl.attributes_for(:photo, :owner => @russian_passport, :created_at => @date, :updated_at => @date))
       @photo2 = person.photos.create(FactoryGirl.attributes_for(:photo, :owner => @russian_passport))
       @photos = PaginableArray.new([@photo1, @photo2])
 
