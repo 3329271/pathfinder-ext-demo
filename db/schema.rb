@@ -124,11 +124,9 @@ ActiveRecord::Schema.define(:version => 20120827105147) do
     t.integer  "person_id"
     t.string   "name"
     t.string   "path"
-    t.datetime "created_date"
-    t.datetime "modified_date"
     t.string   "description"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "russian_passports", :force => true do |t|

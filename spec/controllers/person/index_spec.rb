@@ -28,7 +28,7 @@ describe PersonsController do
       let(:person) { @persons[0] }
       before  do
         passport = person.identity_cards[0].extended_by
-        get :index, first_name: passport.first_name, last_name: passport.last_name
+        get :index, :basic => {first_name: passport.first_name, last_name: passport.last_name}
       end
 
       # its (:status) {should == 200}
@@ -41,7 +41,7 @@ describe PersonsController do
     describe 'should return one unique persons' do
       let(:person) { @persons[0] }
       before  do
-        get :index, middle_name: person.identity_cards[0].extended_by.middle_name
+        get :index, :basic => { middle_name: person.identity_cards[0].extended_by.middle_name }
       end
 
       it 'should return persons' do
@@ -61,7 +61,7 @@ describe PersonsController do
       before  do
         pattern = person.identity_cards[0].extended_by.first_name.clone
         pattern[0] = "?"
-        get :index, first_name: pattern
+        get :index, :basic => {first_name: pattern}
       end
 
       it 'should return persons' do
@@ -80,7 +80,7 @@ describe PersonsController do
       before  do
         pattern = person.identity_cards[0].extended_by.last_name.clone
         pattern = "*" + pattern[pattern.size-2..pattern.size]
-        get :index, last_name: pattern
+        get :index, :basic => {last_name: pattern}
       end
 
       it 'should return persons' do
@@ -119,7 +119,7 @@ describe PersonsController do
 
     describe 'should return one unique persons' do
       before  do
-        get :index, middle_name: "Иванович", page: 2
+        get :index, :basic => {middle_name: "Иванович"}, page: 2
       end
 
       it 'should return persons' do
@@ -150,7 +150,7 @@ describe PersonsController do
       let(:person) { @persons[0] }
       before  do
         passport = person.identity_cards[0].extended_by
-        get :index, first_name: passport.first_name, last_name: passport.last_name
+        get :index, :basic => {first_name: passport.first_name, last_name: passport.last_name}
       end
 
       # its (:status) {should == 200}
