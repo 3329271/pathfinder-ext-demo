@@ -2,7 +2,7 @@ module PersonFinder
   #
   # Пока все ищет в памяти!
   #
-  class IdentityCard
+  class IdentityCards
 
     def find(search_params)#params_model
       @_search_params = search_params
@@ -29,11 +29,7 @@ module PersonFinder
 
     def finded
       person_ids = []
-
-      sources = [IdentityCardQuery, RussianPassportQuery, InternationalPassportQuery]
-      sources.each do |src|
-        person_ids << src.new.where(@_search_params.bare_params)
-      end
+      person_ids << IdentityCardQuery.new.where(@_search_params.bare_params)
       #здесь сохраняем кэш (найденные id в базу)
 
       Kaminari::PaginatableArray.new(person_ids.flatten.uniq.sort)

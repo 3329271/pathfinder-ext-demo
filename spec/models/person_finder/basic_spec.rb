@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe PersonFinder::IdentityCard do
+describe PersonFinder::Basic do
   before do
     @persons = []
     3.times do |i|
@@ -14,7 +14,7 @@ describe PersonFinder::IdentityCard do
   describe 'simple find algorithm' do
     it 'should return empty when empty params' do
       params = PersonFinder::SearchParams.new
-      PersonFinder::IdentityCard.new.find(params).should == []
+      PersonFinder::Basic.new.find(params).should == []
     end
   end
 
@@ -23,7 +23,7 @@ describe PersonFinder::IdentityCard do
     it 'should return one person when unique params' do
       passport = person.identity_cards[0].extended_by
       params = PersonFinder::SearchParams.new(basic:{first_name: passport.first_name})
-      PersonFinder::IdentityCard.new.find(params).should == [@persons[1]]
+      PersonFinder::Basic.new.find(params).should == [@persons[1]]
     end
   end
 
@@ -32,28 +32,28 @@ describe PersonFinder::IdentityCard do
     it 'should return one person when unique params' do
       passport = person.identity_cards[0].extended_by
       params = PersonFinder::SearchParams.new(basic: {first_name: passport.first_name, middle_name: passport.middle_name})
-      PersonFinder::IdentityCard.new.find(params).should == [@persons[0]]
+      PersonFinder::Basic.new.find(params).should == [@persons[0]]
     end
   end
 
   describe 'simple find algorithm' do
     it 'should return one person when unique params' do
       params = PersonFinder::SearchParams.new(basic: {middle_name: "Иванович"})
-      PersonFinder::IdentityCard.new.find(params).should == @persons
+      PersonFinder::Basic.new.find(params).should == @persons
     end
   end
 
   describe 'find algorithm with "*" symbol' do
     it 'should return one person when unique params' do
       params = PersonFinder::SearchParams.new(basic: {middle_name: "Иванов*"})
-      PersonFinder::IdentityCard.new.find(params).should == @persons
+      PersonFinder::Basic.new.find(params).should == @persons
     end
   end
 
   describe 'find algorithm with "?" symbol' do
     it 'should return one person when unique params' do
       params = PersonFinder::SearchParams.new(basic:{middle_name: "Иванов??"})
-      PersonFinder::IdentityCard.new.find(params).should == @persons
+      PersonFinder::Basic.new.find(params).should == @persons
     end
   end
 

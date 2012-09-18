@@ -161,4 +161,128 @@ describe PersonsController do
     end
   end
 
+
+  context 'test for identity_cards search' do
+    before do
+      @persons = []
+
+      person = FactoryGirl.create(:person)
+      @persons << person
+      @serie1 = '1234'
+      @number1 = '123456789'
+      FactoryGirl.create(:russian_passport, :person => person, serie: @serie1, number: @number1)
+      FactoryGirl.create(:international_passport, :person => person)
+
+      person = FactoryGirl.create(:person)
+      @persons << person
+      @serie2 = '12346'
+      @number2 = '1234567890'
+      FactoryGirl.create(:russian_passport, :person => person)
+      FactoryGirl.create(:international_passport, :person => person, serie: @serie2, number: @number2)
+    end
+
+    describe 'should return person by serie' do
+      let(:person) { @persons[0] }
+      before do
+        get :index, :identity_cards => {serie: @serie1}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == [person]
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 1
+        assigns(:persons).total_count.should == 1
+      end
+    end
+
+    describe 'should return person by number' do
+      let(:person) { @persons[0] }
+      before do
+        get :index, :identity_cards => {number: @number1}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == [person]
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 1
+        assigns(:persons).total_count.should == 1
+      end
+    end
+
+    describe 'should return person by number pattern and no type' do
+      let(:person) { @persons[0] }
+      before do
+        get :index, :identity_cards => {number: '12345678*'}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == @persons
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 1
+        assigns(:persons).total_count.should == 2
+      end
+    end
+
+
+    describe 'should return person by number pattern and type 1' do
+      let(:person) { @persons[0] }
+      before do
+        get :index, :identity_cards => {number: '12345678*', type: 1}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == [person]
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 1
+        assigns(:persons).total_count.should == 1
+      end
+    end
+
+    describe 'should return person by number pattern and type' do
+      let(:person) { @persons[1] }
+      before do
+        get :index, :identity_cards => {number: '12345678*', type: 2}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == [person]
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 1
+        assigns(:persons).total_count.should == 1
+      end
+    end
+
+    describe 'should return person by identity_cards type' do
+      let(:person) { @persons[0] }
+      before do
+        get :index, :identity_cards => {type: 1}
+      end
+
+      it 'should return persons' do
+        assigns(:persons).should == []
+      end
+
+      it 'should have page info' do
+        assigns(:persons).current_page.should == 1
+        assigns(:persons).num_pages.should == 0
+        assigns(:persons).total_count.should == 0
+      end
+    end
+
+  end
 end

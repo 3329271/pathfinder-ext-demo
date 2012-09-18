@@ -29,7 +29,9 @@ class PersonsController < ApplicationController
   def match_finder(type)
     case type
     when :basic
-      PersonFinder::IdentityCard.new
+      PersonFinder::Basic.new
+    when :identity_cards
+      PersonFinder::IdentityCards.new
     else
       PersonFinder::Empty.new
     end

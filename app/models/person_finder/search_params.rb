@@ -5,6 +5,7 @@ module PersonFinder
     def initialize(params = {})
       @_params = params.with_indifferent_access
       @_search_type = :basic and return if @_params.keys.include?(:basic.to_s)
+      @_search_type = :identity_cards and return if @_params.keys.include?(:identity_cards.to_s)
     end
 
     def page

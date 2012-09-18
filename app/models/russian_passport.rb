@@ -2,7 +2,7 @@ class RussianPassport < ActiveRecord::Base
   has_one :identity_card, :as => :extended_by, :dependent => :destroy
   has_many :addresses, :as => :owner, :dependent => :destroy
 
-  attr_accessible :first_name, :last_name, :middle_name, :birth_date, :sex_id, :birth_place, :serie
+  attr_accessible :first_name, :last_name, :middle_name, :birth_date, :sex_id, :birth_place
 
   def initialize(*params)
     super
