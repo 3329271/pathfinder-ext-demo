@@ -15,3 +15,9 @@
 /tmp
 /public/assets
 /config/database.yml
+
+#############
+## Sublime Text 2
+#############
+
+*.sublime-workspace
