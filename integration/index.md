@@ -1,7 +1,9 @@
 ---
-layout: index
+layout: integration
 title: Интеграция
 ---
+
+{% assign submenu_name = models %}
 
 ## Обзор
 
@@ -25,4 +27,4 @@ title: Интеграция
 
 ## [Безопасность]({{site.baseurl}}/integration/security)
 
-## [Общие форматы]({{site.baseurl}}/integration/formats)
+## [Общие форматы]({{site.baseurl}}/integration/formats.html)
