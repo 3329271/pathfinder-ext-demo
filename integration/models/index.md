@@ -15,3 +15,8 @@ title: Описания моделей данных
 * [Водительское удостоверение]({{site.baseurl}}/integration/models/driving_licence.html)
 * [Заграничный паспорт иностранного гражданина]({{site.baseurl}}/integration/models/foreign_passport.html)
 * [Миграционная карта]({{site.baseurl}}/integration/models/migration_card.html)
+
+## Другие модели
+
+* [Объект справочника]({{site.baseurl}}/integration/models/classifier_value.html)
+* [Объект количество записей результата]({{site.baseurl}}/integration/models/pages.html)
