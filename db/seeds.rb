@@ -9,8 +9,8 @@
 
 RANDOM_SEED = 1234567
 PERSON_COUNT = 23
-PASSPORT_NUMBER = 7000
-PASSPORT_SERIE = 900000
+PASSPORT_NUMBER = '900000'
+PASSPORT_SERIE = '7000'
 
 def create_person(i, rnd)
   first_names = ['Иван', 'Михаил', 'Виниамин', 'Георгий', 'Тихон', 'Петр', 'Василий', 'Роман', 'Евгений']
@@ -57,8 +57,8 @@ def create_person(i, rnd)
   )
 
   f_passport.build_identity_card(person: person,
-    number: (PASSPORT_NUMBER + 1).to_s,
-    serie: (PASSPORT_SERIE + 1).to_s,
+    number: (PASSPORT_NUMBER + 100).to_s,
+    serie: (PASSPORT_SERIE + 100).to_s,
     type_id: 2,
     issue_date: DateTime.new(2011, 5, 11),
     issuer_code: '12345',
