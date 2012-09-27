@@ -11,6 +11,6 @@ title: Универсальный сервис
 | GET /persons/:id | Получение данных физического лица по его id |
 | [GET /persons/person_id/identity_cards]({{site.baseurl}}/integration/service/get_persons_person_id_identity_cards.html) | Получение документов удостоверяющих личность (ДУЛ) соответствующего физического лица |
 | GET /persons/person_id/identity_cards/identity_card_id/adresses | Получение информации по адресам, связанным с указанным ДУЛ identity_card_id соответствующего физического лица |
-| GET /persons/person_id/identity_cards/identity_card_id/photos | Получение фотографий из соответствующего ДУЛ identity_card_id |
+| [GET /persons/person_id/identity_cards/identity_card_id/photos]({{site.baseurl}}/integration/service/get_persons_person_id_identity_cards_identity_card_id_photos.html) | Получение фотографий из соответствующего ДУЛ identity_card_id |
 | [GET /persons/person_id/photos]({{site.baseurl}}/integration/service/get_persons_person_id_photos.html) | Получение фотографий физического лица
 | GET /photos/photo_id | Получение фотографии по ее photo_id
