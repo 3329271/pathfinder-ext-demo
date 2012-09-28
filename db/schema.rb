@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827105147) do
+ActiveRecord::Schema.define(:version => 20120928081819) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "owner_id"
@@ -52,6 +52,18 @@ ActiveRecord::Schema.define(:version => 20120827105147) do
   end
 
   add_index "declaration_issues", ["identity_card_id"], :name => "index_declaration_issues_on_identity_card_id"
+
+  create_table "driving_licences", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.string   "first_name_latin"
+    t.string   "last_name_latin"
+    t.datetime "birth_date"
+    t.string   "birth_place_code"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "identity_cards", :force => true do |t|
     t.integer  "extended_by_id"
