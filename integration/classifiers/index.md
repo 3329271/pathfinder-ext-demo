@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: integration
 title: Описания справочников
 ---
 
