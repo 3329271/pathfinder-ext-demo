@@ -14,11 +14,12 @@
 /log/*.log
 /tmp
 /public/assets
-/config/database.yml
 
 #############
 ## Sublime Text 2
 #############
 
 *.sublime-workspace
+*.sublime-project
 _site/
+
