@@ -1,0 +1,17 @@
+<driving_licence>
+  <id><%= @driving_licence.id %></id>
+
+  <%= render_cell :identity_card, :show, @driving_licence.identity_card %>
+
+  <first_name><%= @driving_licence.first_name %></first_name>
+  <last_name><%= @driving_licence.last_name %></last_name>
+  <middle_name><%= @driving_licence.middle_name %></middle_name>
+
+  <first_name_latin><%= @driving_licence.first_name_latin %></first_name_latin>
+  <last_name_latin><%= @driving_licence.last_name_latin %></last_name_latin>
+
+  <birth_place>
+    <code><%= @driving_licence.birth_place_code %></code>
+  </birth_place>
+
+</driving_licence>

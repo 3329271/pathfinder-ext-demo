@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
-  before_filter :find_person, :only => [:index]
+  before_filter :find_person
+  before_filter :find_photo, :only => [:show]
 
   def index
     @photos = @person.photos.page(current_page(params)).per(max_page_size)
@@ -9,10 +10,22 @@ class PhotosController < ApplicationController
     end
   end
 
+  def show
+    send_file @photo.path, :type => 'image/jpeg', :filename => @photo.name#:disposition => 'inline'
+  end
+
+  private
+
   def find_person
     @person = Person.find(params[:person_id])
   rescue ActiveRecord::RecordNotFound
     head(404)
   end
 
+  def find_photo
+    @photo = Photo.find(params[:id])
+    raise Errno::ENOENT.new if @photo.path.blank? || !File.exist?(@photo.path)
+  rescue ActiveRecord::RecordNotFound, Errno::ENOENT
+    head(404)
+  end
 end

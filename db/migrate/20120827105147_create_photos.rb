@@ -5,6 +5,8 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :owner_type
       t.references :person
 
+      t.string :name
+      t.string :path, :length => 255
       t.string :description
 
       t.timestamps

@@ -3,7 +3,9 @@ class PersonsController < ApplicationController
 
   def index
     sp = PersonFinder::SearchParams.new(params)
-    @persons = PersonFinder::IdentityCard.new.find(sp)
+    finder = match_finder(sp.search_type)
+
+    @persons = finder.find(sp)
 
     respond_to do |format|
       format.xml { render }
@@ -22,5 +24,16 @@ class PersonsController < ApplicationController
     @person = Person.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     head(404)
+  end
+
+  def match_finder(type)
+    case type
+    when :basic
+      PersonFinder::Basic.new
+    when :identity_cards
+      PersonFinder::IdentityCards.new
+    else
+      PersonFinder::Empty.new
+    end
   end
 end
