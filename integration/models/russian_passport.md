@@ -30,42 +30,41 @@ title: Модель данных "Паспорт гражданина РФ"
 
 {% highlight xml %}
 <russian_passport>
-    <id>5</id>
-    <person_id>5</person_id>
-    <type>
-        <code>1</code>
-        <title></title>
-    </type>
-    <number>7001</number>
-    <series>900001</serie>
-    <issue_date>2001-05-11</issue_date>
-    <issuer_code>12345</issuer_code>
-    <issuer>Отделение УФМС России</issuer>
-
-    <region>
-        <code>770000000000</code>
-        <title></title>
-    </region>
-    <reason>
-        <code>2</code>
-        <title></title>
-    </reason>
-    <status>
-        <code>1</code>
-        <title></title>
-    </status>
-    <first_name>Василий</first_name>
-    <last_name>Иванов</last_name>
-    <middle_name>Евгеньевич</middle_name>
-    <sex>
-        <code>1</code>
-        <title></title>
-    </sex>
-    <birth_place>г. Липецк</birth_place>
-    <birth_date>1965-03-10</birth_date>
+  <id>5</id>
+  <person_id>5</person_id>
+  <type>
+    <code>1</code>
+    <title></title>
+  </type>
+  <number>7001</number>
+  <series>900001</serie>
+  <issue_date>2001-05-11</issue_date>
+  <issuer_code>12345</issuer_code>
+  <issuer>Отделение УФМС России</issuer>
+  <region>
+    <code>770000000000</code>
+    <title></title>
+  </region>
+  <reason>
+    <code>2</code>
+    <title></title>
+  </reason>
+  <status>
+    <code>1</code>
+    <title></title>
+  </status>
+  <first_name>Василий</first_name>
+  <last_name>Иванов</last_name>
+  <middle_name>Евгеньевич</middle_name>
+  <sex>
+    <code>1</code>
+    <title></title>
+  </sex>
+  <birth_place>г. Липецк</birth_place>
+  <birth_date>1965-03-10</birth_date>
 </russian_passport>
 {% endhighlight %}
- 
+
 
 
 

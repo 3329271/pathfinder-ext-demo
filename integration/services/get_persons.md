@@ -56,4 +56,4 @@ title: GET /persons
 ## Неправильный формат запроса
 Если параметры запроса не проходят проверку во **внешней системе**, то необходимо
 расценивать это как ошибку выполнения сервиса и обрабатывать
-[соответсвующим образом]({{site.baseurl}}/integration/service/service_error.html).
+[соответсвующим образом]({{site.baseurl}}/integration/services/service_error.html).

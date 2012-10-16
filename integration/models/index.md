@@ -20,3 +20,6 @@ title: Описания моделей данных
 
 * [Объект справочника]({{site.baseurl}}/integration/models/classifier_value.html)
 * [Объект количество записей результата]({{site.baseurl}}/integration/models/pages.html)
+* [Оружие]({{site.baseurl}}/integration/models/arm.html)
+* [Адрес]({{site.baseurl}}/integration/models/address.html)
+* [Роль в правонарушении]({{site.baseurl}}/integration/models/role_in_offence.html)

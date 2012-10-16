@@ -26,8 +26,8 @@ HTTP STATUS CODE 404.
 
 {% highlight xml %}
 <pages>
-    <current_page>2</current_page>
-    <total_pages>3</total_pages>
-    <total_objects>25</total_objects>
+  <current_page>2</current_page>
+  <total_pages>3</total_pages>
+  <total_objects>25</total_objects>
 </pages>
 {% endhighlight %}
