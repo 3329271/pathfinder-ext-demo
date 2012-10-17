@@ -19,4 +19,5 @@ title: Универсальный сервис
 | [GET /persons/:person_id/movements]({{site.baseurl}}/integration/services/get_persons_person_id_movements.html) | Получение информации о перемещениях
 | [GET /persons/:person_id/arms]({{site.baseurl}}/integration/services/get_persons_person_id_arms.html) | Получение данных об оружии
 | [GET /persons/:person_id/vehicles]({{site.baseurl}}/integration/services/get_persons_person_id_vehicles.html) | Получение информации о транспортных средствах
+| [GET /persons/:person_id/vehicles/:vehicle_id/owners]({{site.baseurl}}/integration/services/get_persons_person_id_vehicles_vehicle_id_owners.html) | Получение информации о транспортных средствах
 

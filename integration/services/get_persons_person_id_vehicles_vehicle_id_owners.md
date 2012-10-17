@@ -1,6 +1,6 @@
 ---
 layout: integration
-title: GET /persons/:person_id/vehicles.xml - Запрос получение данных о транспортных средствах
+title: GET /persons/:person_id/vehicles/:vehicle_id/owners.xml - Запрос получение данных о владельце транспортного средства
 ---
 
 ## Список параметров запроса
@@ -8,10 +8,11 @@ title: GET /persons/:person_id/vehicles.xml - Запрос получение д
 | Параметр | Обязательность | Наименование | Формат данных |
 |:---------|:---------------|:-------------|:------------------------|
 | person_id | Да | ID физического лица | |
+| vehicle_id | Да | ID транспортного средства | |
 
 ## Пример запроса (Запрос получения данных о транспортных средствах с person_id=5)
 
-`GET https://ex_system/persons/5/vehicles.xml`
+`GET https://ex_system/persons/5/vehicles/1/owners.xml`
 
 ## Структура ответа
 
@@ -19,17 +20,14 @@ title: GET /persons/:person_id/vehicles.xml - Запрос получение д
 <?xml version="1.0"?>
 <vehicles>
   <pages>
-    <!-- Структура объекта pages -->
+    <!-- Структура объекта 'pages' -->
   </pages>
-  <vehicle>
-    <id>...</id>
-  <vehicle>
-  <vehicle>
-    <id>...</id>
-  <vehicle>
-  <vehicle>
-    <id>...</id>
-  <vehicle>
+  <pts>
+    <!-- Структура объекта 'ПТС' -->
+  </pts>
+  <pts>
+    <!-- Структура объекта 'ПТС' -->
+  </pts>
 </vehicles>
 {% endhighlight %}
 
@@ -38,4 +36,4 @@ title: GET /persons/:person_id/vehicles.xml - Запрос получение д
 | Параметр | Тип | Длина | Обязательность | Наименование | Формат данных |
 |:---------|:----|:------|:---------------|:-------------|:--------------|
 | [pages]({{site.baseurl}}/integration/models/pages.html) | Object | | Да | Данные о количестве найденных записей, общем количестве страниц и номере текущей страницы загрузки | |
-| [vehicle]({{site.baseurl}}/integration/models/vehicle.html) | Object | | Да | Данные о транспортном средстве | |
+| [pts]({{site.baseurl}}/integration/models/pts.html) | Object | | Да | Данные о ПТС | |

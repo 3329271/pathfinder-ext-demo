@@ -15,6 +15,10 @@ title: Описания моделей данных
 * [Водительское удостоверение]({{site.baseurl}}/integration/models/driving_licence.html)
 * [Заграничный паспорт иностранного гражданина]({{site.baseurl}}/integration/models/foreign_passport.html)
 * [Миграционная карта]({{site.baseurl}}/integration/models/migration_card.html)
+* [Паспорт моряка]({{site.baseurl}}/integration/models/seaman_passport.html)
+* [Паспорт гражданина СССР]({{site.baseurl}}/integration/models/ussr_passport.html)
+* [Военный билет]({{site.baseurl}}/integration/models/military_passport.html)
+* [Свидетельство о рождении]({{site.baseurl}}/integration/models/birth_certificate.html)
 
 ## Другие модели
 
@@ -23,3 +27,6 @@ title: Описания моделей данных
 * [Оружие]({{site.baseurl}}/integration/models/arm.html)
 * [Адрес]({{site.baseurl}}/integration/models/address.html)
 * [Роль в правонарушении]({{site.baseurl}}/integration/models/role_in_offence.html)
+* [Транспортное средство]({{site.baseurl}}/integration/models/vehicle.html)
+* [ПТС]({{site.baseurl}}/integration/models/pts.html)
+* [Cвидетельство о регистрации ТС]({{site.baseurl}}/integration/models/srts.html)

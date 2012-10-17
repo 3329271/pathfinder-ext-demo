@@ -36,8 +36,8 @@ title: Модель данных "Паспорт гражданина РФ"
     <code>1</code>
     <title></title>
   </type>
-  <number>7001</number>
-  <series>900001</serie>
+  <series>7001</serie>
+  <number>900001</number>
   <issue_date>2001-05-11</issue_date>
   <issuer_code>12345</issuer_code>
   <issuer>Отделение УФМС России</issuer>
