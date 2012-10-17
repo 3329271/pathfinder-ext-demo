@@ -29,4 +29,4 @@ title: Описания моделей данных
 * [Роль в правонарушении]({{site.baseurl}}/integration/models/role_in_offence.html)
 * [Транспортное средство]({{site.baseurl}}/integration/models/vehicle.html)
 * [ПТС]({{site.baseurl}}/integration/models/pts.html)
-* [Cвидетельство о регистрации ТС]({{site.baseurl}}/integration/models/srts.html)
+* [Cвидетельство о регистрации ТС]({{site.baseurl}}/integration/models/sts.html)
