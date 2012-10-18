@@ -19,6 +19,8 @@ title: Описания моделей данных
 * [Паспорт гражданина СССР]({{site.baseurl}}/integration/models/ussr_passport.html)
 * [Военный билет]({{site.baseurl}}/integration/models/military_passport.html)
 * [Свидетельство о рождении]({{site.baseurl}}/integration/models/birth_certificate.html)
+* [Справка заключенного]({{site.baseurl}}/integration/models/prisoner_certificate.html)
+* [Удостоверение личности (другое)]({{site.baseurl}}/integration/models/identity card.html)
 
 ## Другие модели
 
