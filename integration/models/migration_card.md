@@ -7,9 +7,8 @@ title: Модель данных "Миграционная карта"
 
 | Параметр | Тип | Длина | Обязательность | Наименование | Формат данных |
 |:---------|:---------------|:-------------|:------------------------|
-| id | Integer | | Да | Уникальный ID документа | |
-| person_id | Integer | | Да | Уникальный ID физического лица | |
-| type | ClassifierValue | | Да | Тип документа | |
+| id | String | | Да | Уникальный ID документа | |
+| person_id | String | | Да | Уникальный ID физического лица | |
 | number | String | | Да | Номер документа | |
 | coupon | String | | Нет | Талон | |
 | arrival_date | Date | | Да | Дата въезда | |
@@ -38,10 +37,6 @@ title: Модель данных "Миграционная карта"
 <migration_card>
   <id>5</id>
   <person_id>5</person_id>
-  <type>
-    <code>5</code>
-    <title></title>
-  </type>
   <number>7001</number>
   <coupon></coupon>
   <arrival_date>2011-05-11</arrival_date>
@@ -60,8 +55,8 @@ title: Модель данных "Миграционная карта"
     <title></title>
   </reason>
   <status>
-      <code></code>
-      <title></title>
+    <code></code>
+    <title></title>
   </status>
   <first_name>Василий</first_name>
   <last_name>Иванов</last_name>

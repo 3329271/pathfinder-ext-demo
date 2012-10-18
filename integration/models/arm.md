@@ -7,7 +7,7 @@ title: Модель данных "Оружие"
 
 | Параметр | Тип | Длина | Обязательность | Наименование | Формат данных |
 |:---------|:---------------|:-------------|:------------------------|
-| id | Integer | | Да | Уникальный ID оружия | |
+| id | String | | Да | Уникальный ID оружия | |
 | category | ClassifierValue | | Да | Категория учета | |
 | type | ClassifierValue | | Да | Стрелковое оружие | |
 | mark | String | | Да | Марка | |
@@ -16,8 +16,8 @@ title: Модель данных "Оружие"
 | number | String | | Да | Номер | |
 | calibre | Real | | Да | Калибр | |
 | manufacturer | ClassifierValue | | Да | Страна изготовитель | |
-| year_information | Real | | Да | Год изготовления | |
-| registration_date | Real | | Да | Дата постановки на учет | |
+| manufacture_year | Integer | | Да | Год изготовления | |
+| registration_date | Date | | Да | Дата постановки на учет | |
 | comments | String | | Да | Дополнительная информация об оружии | |
 | marks | List | | Да | Особые приметы | |
 | mark | String | | Да | Особые примета | |
@@ -55,7 +55,7 @@ title: Модель данных "Оружие"
     <title>РФ</title>
   </manufacturer>
   <!-- Год выпуска -->
-  <year_information>1989</year_information>
+  <manufacture_year>1989</manufacture_year>
   <!-- Дата постановки на учет -->
   <registration_date>1965-03-10</registration_date>
   <!-- Дополнительная информация -->

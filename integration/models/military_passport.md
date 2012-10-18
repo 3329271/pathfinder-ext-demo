@@ -7,11 +7,10 @@ title: Модель данных "Военный билет"
 
 | Параметр | Тип | Длина | Обязательность | Наименование | Формат данных |
 |:---------|:---------------|:-------------|:------------------------|
-| id | Integer | | Да | Уникальный ID Военный билет | |
-| persond_id | Integer | | Да | Уникальный ID физического лица | |
-| type | ClassifierValue | | Да | Тип документа удостоверяющего личность | |
-| number | String | max 7 | Да | Номер документа | |
+| id | String | | Да | Уникальный ID Военный билет | |
+| persond_id | String | | Да | Уникальный ID физического лица | |
 | series | String | max 4 | Да | Серия документа | |
+| number | String | max 7 | Да | Номер документа | |
 | first_name | String | | Да | Имя физического лица | |
 | last_name | String | | Да | Фамилия физического лица | |
 | middle_name | String | | Да | Отчество физического лица | |
@@ -25,10 +24,6 @@ title: Модель данных "Военный билет"
 <military_passport>
   <id>5</id>
   <person_id>5</person_id>
-  <type>
-    <code>ВБ</code>
-    <title>Военный билет</title>
-  </type>
   <series>7001</serie>
   <number>9000001</number>
   <first_name>Василий</first_name>
