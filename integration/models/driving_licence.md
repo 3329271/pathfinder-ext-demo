@@ -7,8 +7,8 @@ title: Модель данных "Водительское удостовере�
 
 | Параметр | Тип | Длина | Обязательность | Наименование | Формат данных |
 |:---------|:---------------|:-------------|:------------------------|
-| id | Integer | | Да | Уникальный ID водительского удостоверения | |
-| person_id | Integer | | Да | Уникальный ID физического лица | |
+| id | String | | Да | Уникальный ID водительского удостоверения | |
+| person_id | String | | Да | Уникальный ID физического лица | |
 | number | String | строго 10 | Да | Номер водительского удостоверения | |
 | categories | List | | Да | Список разрешенных категорий | |
 | category | ClassifierValue | | Да | Категория | |
@@ -34,45 +34,39 @@ title: Модель данных "Водительское удостовере�
 {% highlight xml %}
 <!-- Водительское удостоверение -->
 <driving_licence>
-    <id>5</id>
-    <person_id>5</person_id>
-    <type>
-        <code>2</code>
-        <title></title>
-    </type>
-
-    <number>11ОВ700166</number>
-    <categories>
-        <category>
-            <code>B</code>
-            <title>Категория B</title>
-        </category>
-        <category>
-            <code>С</code>
-            <title>Категория С</title>
-        </category>
-    </categories>
-    <issuer>Отделение УФМС России</issuer>
-    <issue_date>2008-05-11</issue_date>
-    <exp_date>2018-05-11</exp_date>
-    <add_info>…</add_info>
-    <region>
-        <code>770000000000</code>
-        <title></title>
-    </region>
-    <reason>
-        <code>2</code>
-        <title></title>
-    </reason>
-
-    <first_name>Василий</first_name>
-    <last_name>Иванов</last_name>
-    <middle_name>Евгеньевич</middle_name>
-    <first_name_latin>Vasilii</first_name_latin>
-    <last_name_latin>Ivanov</last_name_latin>
-    <birth_place>Москва, Россия</birth_place>
-    <birth_date>1965-03-10</birth_date>
-    <residence>г.Санкт-Петербург, РФ</residence>
-    <residence_latin>Saint-Petersburg, Russian Federation</residence_latin>
+  <id>5</id>
+  <person_id>5</person_id>
+  <number>11ОВ700166</number>
+  <categories>
+    <category>
+      <code>B</code>
+      <title>Категория B</title>
+    </category>
+    <category>
+      <code>С</code>
+      <title>Категория С</title>
+    </category>
+  </categories>
+  <issuer>Отделение УФМС России</issuer>
+  <issue_date>2008-05-11</issue_date>
+  <exp_date>2018-05-11</exp_date>
+  <add_info>…</add_info>
+  <region>
+    <code>770000000000</code>
+    <title></title>
+  </region>
+  <reason>
+    <code>2</code>
+    <title></title>
+  </reason>
+  <first_name>Василий</first_name>
+  <last_name>Иванов</last_name>
+  <middle_name>Евгеньевич</middle_name>
+  <first_name_latin>Vasilii</first_name_latin>
+  <last_name_latin>Ivanov</last_name_latin>
+  <birth_place>Москва, Россия</birth_place>
+  <birth_date>1965-03-10</birth_date>
+  <residence>г.Санкт-Петербург, РФ</residence>
+  <residence_latin>Saint-Petersburg, Russian Federation</residence_latin>
 </driving_licence>
 {% endhighlight %}

@@ -1,6 +1,6 @@
 ---
 layout: integration
-title: Модель данных "Паспорт гражданина РФ"
+title: Модель данных "Справка заключенного (Справка об освобождении заключенного)"
 ---
 
 ##Структура объекта:
@@ -9,55 +9,48 @@ title: Модель данных "Паспорт гражданина РФ"
 |:---------|:---------------|:-------------|:------------------------|
 | id | String | | Да | Уникальный ID паспорта гражданина РФ | |
 |persond_id | String | | Да | Уникальный ID физического лица | |
-| number | String | max 6 | Да | Номер документа | |
+| form | ClassifierValue | | Да | Форма справки ("А", "Б-ИЛ", "Б", "В")
 | series | String | max 4 | Да | Серия документа | |
+| number | String | max 6 | Да | Номер документа | |
 | issue_date | Date | | Да | Дата выдачи | |
-| issuer_code | String | строго 7 | Да | Код подразделения | XXX-XXX, где X – любое число от 0 до 9 |
 | issuer | String | | Да | Кем выдан | |
-| region | ClassifierValue | | Нет | Регион | |
-| reason | ClassifierValue | | Нет | Причина выдачи | |
-| status | ClassifierValue | | Нет | Статус документа удостоверяющего личность | |
 | first_name | String | | Да | Имя физического лица | |
 | last_name | String | | Да | Фамилия физического лица | |
 | middle_name | String | | Да | Отчество физического лица | |
-| sex | ClassifierValue | | Да | Пол физического лица | |
-| birth_place | String | | Да | Место рождения | |
 | birth_date | Date | | Да | Дата рождения | |
-
+| birth_place | String | | Да | Место рождения | |
+| sex | ClassifierValue | | Да | Пол физического лица | |
+| clause | String | | Да | Осужден по статье | |
+| release_date | Date | | Да | Дата освобождения | |
+| destination | String | | Да | Следует к месту жительства | |
 
 ##Представление объекта в виде XML:
 
 {% highlight xml %}
-<russian_passport>
+<prisoner_certificate>
   <id>5</id>
   <person_id>5</person_id>
-  <series>7001</serie>
-  <number>900001</number>
-  <issue_date>2001-05-11</issue_date>
-  <issuer_code>12345</issuer_code>
-  <issuer>Отделение УФМС России</issuer>
-  <region>
-    <code>770000000000</code>
-    <title></title>
-  </region>
-  <reason>
-    <code>2</code>
-    <title></title>
-  </reason>
-  <status>
+  <form>
     <code>1</code>
-    <title></title>
-  </status>
+    <title>А</title>
+  </form>
+  <number>7001</number>
+  <series>900001</serie>
+  <issue_date>2001-05-25</issue_date>
+  <issuer>Бутырка</issuer>
   <first_name>Василий</first_name>
   <last_name>Иванов</last_name>
   <middle_name>Евгеньевич</middle_name>
   <sex>
     <code>1</code>
-    <title></title>
+    <title>М</title>
   </sex>
   <birth_place>г. Липецк</birth_place>
-  <birth_date>1965-03-10</birth_date>
-</russian_passport>
+  <birth_date>1965-11-15</birth_date>
+  <clause>143-17</clause>
+  <release_date>2001-05-25</release_date>
+  <destination>Москва, ул. Братиславская, д. 18, корп. 1, кв. 403</destination>
+</prisoner_certificate>
 {% endhighlight %}
 
 

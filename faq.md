@@ -1,5 +1,5 @@
 ---
-layout: integration
+layout: index
 title: Часто задаваемые вопросы
 ---
 
