@@ -9,30 +9,30 @@ title: Модель данных "Свидетельство о регистра
 |:---------|:---------------|:-------------|:------------------------|
 | id | String | | Да | Уникальный ID СТС | |
 | person_id | String | | Да | Уникальный ID человека в системе | |
-| series | String | 4 | Да | Серия СТС | |
-| number | String | 6 | Да | Номер СТС| |
-| registration_number | String | | Да | Гос.номер | |
-| vin | String | | Да | vin | |
-| marque  | String | | Да | марка | |
-| model | String | | Да | Модель | |
-| vehicle_type | ClassifierValue | | Да | Тип ТС | |
-| body_type | ClassifierValue | | Да | Тип кузова | |
-| vehicle_category | ClassifierValue | | Да | категория ТС | |
-| year | Integer | | Да | Год выпуска ТС | |
-| engine_model | String | | Да | Модель двигателя | |
-| engine_number | String | | Да | Номер двигателя | |
-| chassis_number | String | | Да | Номер шасси | |
-| body_number | String | | Да | Номер кузова | |
-| color | String | | Да | Цвет | |
-| kilowatt_power | Real | | Да | Мощность (Квт) | |
-| horsepower_power | Real | | Да | Мощность (ЛС) | |
-| engine_v | Real | | Да | Объем двигателя | |
-| pts_series | String | 4 | Да | Серия ПТС | |
-| pts_number | String | 6 | Да | Номер ПТС| |
-| max_weight | Real | | Да | Масса (макс.) | |
-| weight | Real | | Да | Масса (снар.) без нагрузки | |
-| issuer | String | | Да | кем выдан | |
-| issue_date | Date | | Да | дата выдачи СТС | |
+| series | String | 4 | Нет | Серия СТС | |
+| number | String | 6 | Нет | Номер СТС| |
+| registration_number | String | | Нет | Гос.номер | |
+| vin | String | | Нет | vin | |
+| marque  | String | | Нет | марка | |
+| model | String | | Нет | Модель | |
+| vehicle_type | String | | Нет | Тип ТС | |
+| body_type | String | | Нет | Тип кузова | |
+| vehicle_category | ClassifierValue | | Нет | категория ТС | |
+| year | Integer | | Нет | Год выпуска ТС | |
+| engine_model | String | | Нет | Модель двигателя | |
+| engine_number | String | | Нет | Номер двигателя | |
+| chassis_number | String | | Нет | Номер шасси | |
+| body_number | String | | Нет | Номер кузова | |
+| color | String | | Нет | Цвет | |
+| kilowatt_power | Real | | Нет | Мощность (Квт) | |
+| horsepower_power | Real | | Нет | Мощность (ЛС) | |
+| engine_v | Real | | Нет | Объем двигателя | |
+| pts_series | String | 4 | Нет | Серия ПТС | |
+| pts_number | String | 6 | Нет | Номер ПТС| |
+| max_weight | Real | | Нет | Масса (макс.) | |
+| weight | Real | | Нет | Масса (снар.) без нагрузки | |
+| issuer | String | | Нет | кем выдан | |
+| issue_date | Date | | Нет | дата выдачи СТС | |
 | special_notes | String | | Нет | Особые отметки СТС | |
 | additional_information | String | | Нет | Особые отметки | |
 
@@ -50,17 +50,11 @@ title: Модель данных "Свидетельство о регистра
   <vin>12313dsdfas23424</vin>
   <mark>Лексус</mark>
   <model>RX350</model>
-  <vehicle_type>
-    <code>1</code>
-    <title>ЛЕГКОВОЙ</title>
-  </vehicle_type>
-  <body_type>
-    <code>1</code>
-    <title>УНИВЕРСАЛ</title>
-  </body_type>
+  <vehicle_type>Легковые автомобили седан</vehicle_type>
+  <body_type>Седан</body_type>
   <vehicle_category>
-    <code>1</code>
-    <title>ABCDприцеп</title>
+    <code>B</code>
+    <title>Легковой автомобиль</title>
   </vehicle_category>
   <year>2007</year>
   <engine_model>3434</engine_model>
