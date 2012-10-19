@@ -11,21 +11,21 @@ title: Модель данных "ПТС"
 | serie | String | | Да | Серия | |
 | number | String | | Да | Номер | |
 | registration_number | String | | Да | Гос.номер | |
-| registration_number_type | ClassifierValue | | Да | Тип рег.знака | |
+| registration_number_type | String | | Да | Тип рег.знака | |
 | engine_number | String | | Да | Номер двигателя | |
 | engine_type | String | | Да | Тип двигателя | |
 | engine_model | String | | Да | Модель двигателя | |
 | engine_v | Real | | Да | Объем двигателя | |
 | engine_year | Integer | | Да | Год выпуска (двигателя) | |
-| euro_standart | ClassifierValue | | Да | Экологический класс | |
+| euro_standart | String | | Да | Экологический класс | |
 | chassis_number | String | | Да | Номер шасси | |
 | body_number | String | | Да | Номер кузова | |
 | vin | String | | Да | vin | |
 | additional_information | String | | Нет | Доп.сведения | |
 | mark | String | | Да | Марка | |
 | model | String | | Да | Модель | |
-| vehicle_type | ClassifierValue | | Да | Тип ТС | |
-| body_type | ClassifierValue | | Нет | Тип кузова | |
+| vehicle_type | String | | Да | Тип ТС | |
+| body_type | String | | Нет | Тип кузова | |
 | vehicle_category | ClassifierValue | | Нет | Категория ТС | |
 | year | Integer | | Да | Год выпуска (авто) | |
 | color | String | | Да | Цвет | |
@@ -57,11 +57,8 @@ title: Модель данных "ПТС"
   <id>123</id>
   <serie>61MP</serie>
   <number>999999</number>
-  <!-- registration_number>A197HP177</registration_number>
-  <registration_number_type>
-    <code>1</code>
-    <title>Основной</title>
-  </registration_number_type -->
+  <registration_number>Х999ХХКК</registration_number>
+  <registration_number_type>Автомобиль  легковой, грузовой и автобусы</registration_number_type>
   <engine_number>SD12313123</engine_number>
   <engine_type>
     <code>1</code>
@@ -70,24 +67,15 @@ title: Модель данных "ПТС"
   <engine_model>3434</engine_model>
   <engine_v>2342,3</engine_v>
   <engine_year>2007</engine_year>
-  <euro_standart>
-    <code>1</code>
-    <title>Третий</title>
-  </euro_standart>
+  <euro_standart>Третий</euro_standart>
   <chassis_number>sdfsd-s12313</chassis_number>
   <body_number>123123dfsf</body_number>
   <vin>12313dsdfas23424</vin>
   <additional_information>Дополнительая информация</additional_information>
   <mark>HYUNDAI SM</mark>
   <model>Santa Fe classic</model>
-  <vehicle_type>
-    <code>1</code>
-    <title>Легковой универсал</title>
-  </vehicle_type>
-  <body_type>
-    <code>1</code>
-    <title>универсал</title>
-  </body_type>
+  <vehicle_type>Легковые автомобили седан</vehicle_type>
+  <body_type>Cедан</body_type>
   <vehicle_category>
     <code>2</code>
     <title>B</title>
