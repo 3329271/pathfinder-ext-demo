@@ -17,10 +17,10 @@ title: Модель данных "Миграционная карта"
 | departure_place | String | | Да | ПИК выезда | |
 | stay_since | Date | | Да | Период пребывания с | |
 | stay_to | Date | | Да | Период пребывания по | |
-| visit_aim | ClassifierValue | | Да | Цель визита | |
+| visit_aim | String | | Да | Цель визита | |
 | invite_side | String| | Нет | Приглашающая сторона | |
-| reason | ClassifierValue | | Нет | Причина выдачи | |
-| status | ClassifierValue | | Нет | Статус документа | |
+| reason | String | | Нет | Причина выдачи | |
+| status | String | | Нет | Статус документа | |
 | first_name | String | | Да | Имя физического лица | |
 | last_name | String | | Да | Фамилия физического лица | |
 | middle_name | String | | Да | Отчество физического лица | |
@@ -45,19 +45,10 @@ title: Модель данных "Миграционная карта"
   <departure_place>Домодедово</departure_place>
   <stay_since>2011-05-01</stay_since>
   <stay_to>2011-06-11</stay_to>
-  <visit_aim>
-    <code>2</code>
-    <title>Туризм</title>
-  </visit_aim>
+  <visit_aim>Цель визита</visit_aim>
   <invite_side></invite_side>
-  <reason>
-    <code></code>
-    <title></title>
-  </reason>
-  <status>
-    <code></code>
-    <title></title>
-  </status>
+  <reason>Причина выдачи</reason>
+  <status>Статус документа</status>
   <first_name>Василий</first_name>
   <last_name>Иванов</last_name>
   <middle_name>Евгеньевич</middle_name>

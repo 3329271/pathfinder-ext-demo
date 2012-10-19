@@ -15,8 +15,8 @@ title: Модель данных "Паспорт гражданина РФ"
 | issuer_code | String | строго 7 | Да | Код подразделения | XXX-XXX, где X – любое число от 0 до 9 |
 | issuer | String | | Да | Кем выдан | |
 | region | ClassifierValue | | Нет | Регион | |
-| reason | ClassifierValue | | Нет | Причина выдачи | |
-| status | ClassifierValue | | Нет | Статус документа удостоверяющего личность | |
+| reason | String | | Нет | Причина выдачи | |
+| status | String | | Нет | Статус документа удостоверяющего личность | |
 | first_name | String | | Да | Имя физического лица | |
 | last_name | String | | Да | Фамилия физического лица | |
 | middle_name | String | | Да | Отчество физического лица | |
@@ -40,14 +40,8 @@ title: Модель данных "Паспорт гражданина РФ"
     <code>770000000000</code>
     <title></title>
   </region>
-  <reason>
-    <code>2</code>
-    <title></title>
-  </reason>
-  <status>
-    <code>1</code>
-    <title></title>
-  </status>
+  <reason>Причина выдачи</reason>
+  <status>Статус документа удостоверяющего личность</status>
   <first_name>Василий</first_name>
   <last_name>Иванов</last_name>
   <middle_name>Евгеньевич</middle_name>
