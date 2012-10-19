@@ -16,6 +16,12 @@ title: GET /persons
 | basic[birth_date] | Нет | Дата рождения | |
 | basic[birth_date_since] | Нет | Дата рождения с | |
 | basic[birth_date_to] | Нет | Дата рождения по | |
+| vehicle[registration_number] | Нет | Гос. номер | |
+| vehicle[mark] | Нет | Марка | |
+| vehicle[model] | Нет | Модель | |
+| vehicle[color] | Нет | Цвет | |
+| vehicle[year] | Нет | Год выпуска | |
+
 
 Любой параметр может отсутстововать.
 Любой параметр (кроме даты) может содержать знак ? обозначающий любой
@@ -57,3 +63,4 @@ title: GET /persons
 Если параметры запроса не проходят проверку во **внешней системе**, то необходимо
 расценивать это как ошибку выполнения сервиса и обрабатывать
 [соответсвующим образом]({{site.baseurl}}/integration/services/service_error.html).
+

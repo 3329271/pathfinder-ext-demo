@@ -1,6 +1,6 @@
 ---
 layout: integration
-title: GET /persons/:person_id/vehicles/:vehicle_id/owners.xml - Запрос получение данных о владельце транспортного средства
+title: GET /vehicles/:vehicle_id/owners.xml - Запрос получение данных о владельце транспортного средства
 ---
 
 ## Список параметров запроса
@@ -12,7 +12,7 @@ title: GET /persons/:person_id/vehicles/:vehicle_id/owners.xml - Запрос п
 
 ## Пример запроса (Запрос получения данных о транспортных средствах с person_id=5)
 
-`GET https://ex_system/persons/5/vehicles/1/owners.xml`
+`GET https://ex_system/vehicles/1/owners.xml`
 
 ## Структура ответа
 

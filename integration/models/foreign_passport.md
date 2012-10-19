@@ -14,8 +14,8 @@ title: Модель данных "Заграничный паспорт инос
 | issue_date | Date | | Да | Дата выдачи | |
 | exp_date | Date | | Да | Дата окончания срока действия | |
 | issuer | String | | Да | Кем выдан | |
-| reason | ClassifierValue | | Нет | Причина выдачи | |
-| status | ClassifierValue | | Нет | Статус документа удостоверяющего личность | |
+| reason | String | | Нет | Причина выдачи | |
+| status | String | | Нет | Статус документа удостоверяющего личность | |
 | first_name | String | | Да | Имя физического лица | |
 | last_name | String | | Да | Фамилия физического лица | |
 | sex | ClassifierValue | | Да | Пол физического лица | |
@@ -35,14 +35,8 @@ title: Модель данных "Заграничный паспорт инос
   <exp_date>2013-05-11</exp_date>
   <issuer_code>12345</issuer_code>
   <issuer>…</issuer>
-  <reason>
-    <code>2</code>
-    <title></title>
-  </reason>
-  <status>
-    <code>1</code>
-    <title></title>
-  </status>
+  <reason>Причина выдачи</reason>
+  <status>Статус документа удостоверяющего личность</status>
   <first_name>Pol</first_name>
   <last_name>Frank</last_name>
   <sex>
